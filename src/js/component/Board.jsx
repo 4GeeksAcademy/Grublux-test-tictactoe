@@ -8,9 +8,14 @@ import { useState } from "react";
 const Board= () => {
 	const [squareValues, setValues] = useState(["","","","","","","","",""]);
 
+  const [currentPlayer, setCurrentPlayer] = useState("X");
+  
   const clickHandler = (index) => {
     const newSquareValues = [...squareValues];
-    newSquareValues[index] = 'X';
+    newSquareValues[index] = currentPlayer == 'X' ? 'X' : 'O';
+    setCurrentPlayer(
+      currentPlayer == 'X' ? 'O' : 'X'
+    );
     setValues(newSquareValues);
   }
   
