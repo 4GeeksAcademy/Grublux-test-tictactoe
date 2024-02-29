@@ -1,7 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-//include images into your bundle
+//include images or components into your bundle
 
 
 //create your first component
@@ -19,6 +19,12 @@ const Board = ({ currentPlayer, setCurrentPlayer }) => {
     [1, 0, 0, 0, 1, 0, 0, 0, 1],
     [0, 0, 1, 0, 1, 0, 1, 0, 0],
   ];
+
+  const resetGame = () => {
+    setValues(["", "", "", "", "", "", "", "", ""]);
+    setWinner(null);
+    console.log(gameDone);
+  }
 
 
   const loopThruWinners = (arr) => {
@@ -72,9 +78,14 @@ const Board = ({ currentPlayer, setCurrentPlayer }) => {
           <div className="col-8 text-center text-white bg-secondary">
             <h1>Tic Tac Toe in React.jsx</h1>
           </div>
-          <div className="col-8 text-center text-white bg-secondary" style={{ display: winner ? "none" : "block" }}>
+          <div className="col-8 text-center text-white bg-secondary"
+            style={{ display: winner ? "none" : "block" }}>
             <h3>It is {currentPlayer}'s turn</h3>
           </div>
+          {/* <div className="col-8 text-center text-white bg-secondary"
+            style={{ display: !resetGame ? "none" : "block" }}>
+            <h3>It is {currentPlayer}'s turn</h3>
+          </div> */}
           <div className="col-8 text-center text-white bg-secondary" style={{ display: winner ? "block" : "none" }}>
             <h3>The winner is {winner}!!!</h3>
           </div>
@@ -119,6 +130,12 @@ const Board = ({ currentPlayer, setCurrentPlayer }) => {
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(8)}
             >{squareValues[8]}</button>
+          </div>
+        </div>
+        <div className="row text-center text-white bg-secondary" style={{ display: winner ? "block" : "none" }}>
+          <div className="col">
+            <button className="square myBox fs-3 text"
+              onClick={() => resetGame()}>Start a new game!</button>
           </div>
         </div>
       </div>

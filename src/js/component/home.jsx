@@ -8,12 +8,12 @@ import Login from "./Login";
 //create your first component
 const Home = () => {
 	const [currentPlayer, setCurrentPlayer] = useState("");
-	
+
 	return (
 
 		<div className="text-center">
-		{!currentPlayer && <Login setCurrentPlayer={setCurrentPlayer} currentPlayer={currentPlayer}/>}
-			<Board setCurrentPlayer={setCurrentPlayer} currentPlayer={currentPlayer}/>
+			{!currentPlayer && <Login setCurrentPlayer={setCurrentPlayer} currentPlayer={currentPlayer} />}
+			<Board setCurrentPlayer={setCurrentPlayer} currentPlayer={currentPlayer} />
 		</div>
 	);
 };
