@@ -80,56 +80,76 @@ const Board = ({ currentPlayer, setCurrentPlayer }) => {
           </div>
           <div className="col-8 text-center text-white bg-secondary"
             style={{ display: winner ? "none" : "block" }}>
-            <h3>It is {currentPlayer}'s turn</h3>
+            <h3>It is {currentPlayer == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : <i class="fa-solid fa-dog purple"></i>}'s turn</h3>
           </div>
           {/* <div className="col-8 text-center text-white bg-secondary"
             style={{ display: !resetGame ? "none" : "block" }}>
             <h3>It is {currentPlayer}'s turn</h3>
           </div> */}
           <div className="col-8 text-center text-white bg-secondary" style={{ display: winner ? "block" : "none" }}>
-            <h3>The winner is {winner}!!!</h3>
+            <h3>{winner == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : <i class="fa-solid fa-dog purple"></i>} WINS !!!</h3>
           </div>
         </div>
-        <div className="row mt-5 d-flex justify-content-center g-0">
+        <div className="row mt-5 d-flex justify-content-center">
           <div className="col-1">
-            <button className="square myBox fs-1 text" onClick={() => clickHandler(0)}
-            >{squareValues[0]}</button>
+            <button className="square myBox fs-1 text boardButton" onClick={() => clickHandler(0)}
+            >{squareValues[0] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[0] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(1)}
-            >{squareValues[1]}</button>
+            >{squareValues[1] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[1] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(2)}
-            >{squareValues[2]}</button>
+            >{squareValues[2] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[2] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
         </div>
-        <div className="row d-flex justify-content-center g-0">
+        <div className="row d-flex justify-content-center">
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(3)}
-            >{squareValues[3]}</button>
+            >{squareValues[3] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[3] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(4)}
-            >{squareValues[4]}</button>
+            >{squareValues[4] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[4] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(5)}
-            >{squareValues[5]}</button>
+            >{squareValues[5] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[5] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
         </div>
-        <div className="row d-flex justify-content-center g-0">
+        <div className="row d-flex justify-content-center">
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(6)}
-            >{squareValues[6]}</button>
+            >{squareValues[6] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[6] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(7)}
-            >{squareValues[7]}</button>
+            >{squareValues[7] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[7] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
           <div className="col-1">
             <button className="square myBox fs-1 text" onClick={() => clickHandler(8)}
-            >{squareValues[8]}</button>
+            >{squareValues[8] == "X" ? <i class="fa-solid fa-heart pink"></i>
+              : squareValues[8] == "O" ? <i class="fa-solid fa-dog purple"></i>
+                : ""}</button>
           </div>
         </div>
         <div className="row text-center text-white bg-secondary" style={{ display: winner ? "block" : "none" }}>

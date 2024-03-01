@@ -17,9 +17,9 @@ const Login = ({ setCurrentPlayer }) => {
             </div>
             <div className="col-7 bg-dark py-3">
                 <button className="square loginButton fs-1 text"
-                    onClick={() => setCurrentPlayer("X")}>X</button>
+                    onClick={() => setCurrentPlayer("X")}><i class="fa-solid fa-heart pink"></i></button>
                 <button className="square loginButton fs-1 text"
-                    onClick={() => setCurrentPlayer("O")}>O</button>
+                    onClick={() => setCurrentPlayer("O")}><i class="fa-solid fa-dog purple"></i></button>
             </div>
         </div>
     );

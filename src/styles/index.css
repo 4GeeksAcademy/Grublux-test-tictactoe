@@ -25,3 +25,20 @@
     min-height: 90px;
     background-color: darkgrey;
 }
+
+.pink {
+    color: rgb(243, 110, 132)
+}
+
+.purple {
+    color: purple;
+}
+
+boardButton {
+    background-color: rgba(128, 128, 128, 0);
+}
+
+
+button:hover {
+    border: 3px solid rgba(243, 110, 132, 0.355);
+}
